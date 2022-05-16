@@ -20,7 +20,7 @@ public class TestGestorUsuarios {
         bbdd.getUsuarios().add(usr);
     }
     @Nested
-    @DisplayName("notificarAlarma")
+    @DisplayName("Notificar Alarma [PRB-003]")
     class notificarAlarma{
     	@BeforeEach
     	void setUp() throws Exception {
