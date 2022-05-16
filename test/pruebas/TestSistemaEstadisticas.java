@@ -1,14 +1,14 @@
 package pruebas;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestSistemaEstadisticas {
 
-    static SistemaEstadisticas sistema;
+    SistemaEstadisticas sistema;
 
-    @BeforeAll
-    static void setUpBeforeClass() throws Exception{
+    @BeforeEach
+    void setUpBeforeEach() throws Exception{
         sistema = new SistemaEstadisticas();
     }
 
@@ -16,18 +16,22 @@ public class TestSistemaEstadisticas {
     void testRegistrarAlertas() {
         Alerta alerta = new Alerta();
         String mensaje = "Se han registrado 1 alertas.";
-        boolean ret = sistema.registrarAlerta(alerta);
-        assertEquals(ret, true);
+        assertEquals(true, sistema.registrarAlerta(alerta));
         assertEquals(mensaje, sistema.consultarEstadisticas());
     }
 
     @Test
     void testAlertaNull() {
         Alerta alertaNull = null;
-        String mensaje = "Se han registrado 1 alertas.";
-        boolean ret = sistema.registrarAlerta(alertaNull);
-        assertEquals(ret, true);
+        String mensaje = "Se han registrado 0 alertas.";
+        assertEquals(true, sistema.registrarAlerta(alertaNull));
         assertEquals(mensaje, sistema.consultarEstadisticas());
     }
 
+    @Test
+    void testBBDDNoDisponible(){
+        sistema = null;
+        Alerta alerta = new Alerta();
+        assertEquals(false, sistema.registrarAlerta(alerta));
+    }
 }
