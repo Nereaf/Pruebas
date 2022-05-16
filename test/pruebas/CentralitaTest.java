@@ -1,6 +1,7 @@
 package pruebas;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
 
 import java.time.Duration;
 import java.util.Date;
@@ -12,7 +13,7 @@ class CentralitaTest {
 	static Centralita cen;
 	@BeforeAll
     static void setUpBeforeClass() throws Exception{
-        GAS = new GestorAlarmas();
+        GAS = mock(GestorAlarmas.class);
         cen = new Centralita(GAS);
 	}
 	@Test
