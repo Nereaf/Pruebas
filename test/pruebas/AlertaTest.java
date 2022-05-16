@@ -9,7 +9,7 @@ import org.junit.jupiter.api.*;
 class AlertaTest {
 
 	@Test
-	
+	@DisplayName("CPN-002-01")
 	void testCrearAlerta() {
 		Alarma al= new Alarma(8, "terremoto");
 		Date date= new Date();
@@ -18,6 +18,7 @@ class AlertaTest {
 		assertEquals(esperada, alerta.crearAlerta("activo", "ETSE" , date, al) );
 	}
    @Test
+	@DisplayName("CPN-002-02")
 	void testCrearAlerta2() {
 		Alarma al= new Alarma(8, "terremoto");
 		Date date= new Date();
@@ -26,6 +27,7 @@ class AlertaTest {
 		assertNull(alerta.crearAlerta("activo", "ETSE" , date, al), "no se ha introducido error" );
 	}
    @Test
+	@DisplayName("CPN-002-03")
 	void testCrearAlerta3() {
 		Alarma al= new Alarma(8, "terremoto");
 		Date date= new Date();
@@ -34,6 +36,7 @@ class AlertaTest {
 		assertEquals(esperada, alerta.crearAlerta("activo", "ETSE" , date, al) );
 	}
    @Test
+	@DisplayName("CPN-002-04")
 	void testCrearAlerta4() {
 		Alarma al= new Alarma(8, "terremoto");
 		Date date= new Date();
