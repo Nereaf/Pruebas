@@ -19,6 +19,7 @@ public class TestGestorUsuarios {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-007-01]")
     void testCamino1() {
         MiembroUSC usuario = new MiembroUSC("nombre", "DNI", "usuario", "contrasena", "email", 1234, null);
         usuario.setCorreo("");
@@ -26,6 +27,7 @@ public class TestGestorUsuarios {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-007-02]")
     void testCamino2() {
         MiembroUSC usuario = new MiembroUSC("nombre", "DNI", "usuario", "contrasena", "email", 1234, null);
         usuario.setCorreo("emailIncorrecto");
@@ -33,6 +35,7 @@ public class TestGestorUsuarios {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-007-03]")
     void testCamino3() {
         MiembroUSC usuario = new MiembroUSC("nombre", "DNI", "usuario", "contrasena", "email", 1234, null);
         usuario.setContrasena("contrasenaFalsa");
@@ -40,6 +43,7 @@ public class TestGestorUsuarios {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-007-04]")
     void testCamino4() {
         MiembroUSC usuario = new MiembroUSC("nombre", "DNI", "usuario", "contrasena", "email", 1234, null);
         usuario.setNombre("nombreNuevo");
@@ -50,6 +54,7 @@ public class TestGestorUsuarios {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-007-05]")
     void testCamino5(){
         MiembroUSC usuario = new MiembroUSC("nombre", "DNI", "usuario", "contrasena", "email", 1234, null);
         assertEquals(usr, gu.crudUsuario(usuario, 2));
@@ -57,6 +62,7 @@ public class TestGestorUsuarios {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-007-06]")
     void testCamino6(){
         MiembroUSC usuario = new MiembroUSC("nombre", "DNI", "usuario", "contrasena", "email", 1234, null);
         assertNull(gu.crudUsuario(usuario, 5));
