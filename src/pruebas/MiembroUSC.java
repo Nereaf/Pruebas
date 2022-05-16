@@ -1,4 +1,7 @@
 package pruebas;
+
+import java.util.Arrays;
+
 public class MiembroUSC extends Usuario{
 	
     private Float[] localizacion;
