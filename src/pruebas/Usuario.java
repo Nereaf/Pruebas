@@ -64,5 +64,23 @@ public class Usuario {
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(DNI, contrasena, email, nombre, telefono, usuario);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		return Objects.equals(DNI, other.DNI) && Objects.equals(contrasena, other.contrasena)
+				&& Objects.equals(email, other.email) && Objects.equals(nombre, other.nombre)
+				&& Objects.equals(telefono, other.telefono) && Objects.equals(usuario, other.usuario);
+	}
 
 }
