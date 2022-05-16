@@ -13,6 +13,7 @@ public class TestSistemaEstadisticas {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-005-01]")
     void testRegistrarAlertas() {
         Alerta alerta = new Alerta();
         String mensaje = "Se han registrado 1 alertas.";
@@ -21,6 +22,7 @@ public class TestSistemaEstadisticas {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-005-02]")
     void testAlertaNull() {
         Alerta alertaNull = null;
         String mensaje = "Se han registrado 0 alertas.";
@@ -29,6 +31,7 @@ public class TestSistemaEstadisticas {
     }
 
     @Test
+    @DisplayName("Prueba [CPB-005-03]")
     void testBBDDNoDisponible(){
         sistema = null;
         Alerta alerta = new Alerta();
