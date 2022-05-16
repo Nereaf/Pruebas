@@ -150,14 +150,14 @@ public class TestGestorUsuarios {
 	    }
     } 
     @Nested
-    @DisplayName("crudUsuarioAdmin")
+    @DisplayName("crudUsuarioAdmin [PRB-005]")
     class crudUsuarioAdmin{
     	@AfterEach
     	void tearDown() throws Exception {
     		bbdd.getUsuarios().clear();
     	}
     		@Test
-    		@DisplayName("CDP-005-01")
+    		@DisplayName("Prueba [CPB-010-01]")
     		void crudUsuario01() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -170,7 +170,7 @@ public class TestGestorUsuarios {
 
     		}
     		@Test
-    		@DisplayName("CDP-005-02")
+    		@DisplayName("Prueba [CPB-010-02]")
     		void crudUsuario02() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -182,7 +182,7 @@ public class TestGestorUsuarios {
     		}
 
     		@Test
-    		@DisplayName("CDP-005-03")
+    		@DisplayName("Prueba [CPB-010-03]")
     		void crudUsuario03() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -205,7 +205,7 @@ public class TestGestorUsuarios {
     			assertNull(usr2, "no we ha devulveo lo mismo");
     		}
     		@Test
-    		@DisplayName("CDP-005-05")
+    		@DisplayName("Prueba [CPB-010-05]")
     		void crudUsuario05() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -217,7 +217,7 @@ public class TestGestorUsuarios {
     			assertTrue(bbdd.getUsuarios().contains(usc), "no contiene al usuario");
     		}
     		@Test
-    		@DisplayName("CDP-005-06")
+    		@DisplayName("Prueba [CPB-010-06]")
     		void crudUsuario06() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -230,7 +230,7 @@ public class TestGestorUsuarios {
     			}
 
     		@Test
-    		@DisplayName("CDP-005-07")
+    		@DisplayName("Prueba [CPB-010-07]")
     		void crudUsuario07() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -243,7 +243,7 @@ public class TestGestorUsuarios {
     		}
 
     		@Test
-    		@DisplayName("CDP-005-08")
+    		@DisplayName("Prueba [CPB-010-08]")
     		void crudUsuario08() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -257,7 +257,7 @@ public class TestGestorUsuarios {
     		}
 
     		@Test
-    		@DisplayName("CDP-005-09")
+    		@DisplayName("Prueba [CPB-010-09]")
     		void crudUsuario09() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -271,7 +271,7 @@ public class TestGestorUsuarios {
     		}
 
     		@Test
-    		@DisplayName("CDP-005-10")
+    		@DisplayName("Prueba [CPB-010-10]")
     		void crudUsuario10() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
@@ -286,7 +286,7 @@ public class TestGestorUsuarios {
     		}
 
     		@Test
-    		@DisplayName("CDP-005-11")
+    		@DisplayName("Prueba [CPB-010-11]")
     		void crudUsuario11() {
     			Administrador ad= new Administrador( "mariana", "65985458L", "mariana02", "1234", "mariana@rai.usc.es", 659874534, "administrativo");
     			bbdd.getUsuarios().add(ad);
